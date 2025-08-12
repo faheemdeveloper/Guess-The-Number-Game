@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Guess The Number</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="game">
+      <header class="header">
+        <h1>Guess The Number</h1>
+        <p class="sub">
+          Guess a number between <strong>1</strong> and <strong>20</strong>
+        </p>
+      </header>
+
+      <section class="panel">
+        <!-- Number display (JS will update .number--value) -->
+        <div class="number">
+          <span id="numberValue" class="number--value">?</span>
+        </div>
+
+        <!-- Controls -->
+        <div class="controls">
+          <input
+            id="guessInput"
+            class="guess-input"
+            type="number"
+            min="1"
+            max="20"
+            placeholder="Enter your guess..."
+            aria-label="Enter your guess between 1 and 20"
+          />
+          <button id="checkBtn" class="btn btn-primary">Check</button>
+          <button id="againBtn" class="btn btn-secondary">Again</button>
+        </div>
+
+        <!-- Message area (JS will update textContent) -->
+        <p id="message" class="message">Start guessing...</p>
+
+        <!-- Score area -->
+        <div class="scores">
+          <div class="score-block">
+            <span>Score</span>
+            <span id="score" class="score-value">20</span>
+          </div>
+          <div class="score-block">
+            <span>Highscore</span>
+            <span id="highscore" class="score-value">0</span>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <small
+          >Built for practice — JS hooks: <code>#guessInput</code>
+          <code>#checkBtn</code> <code>#againBtn</code>
+          <code>#numberValue</code> <code>#message</code> <code>#score</code>
+          <code>#highscore</code></small
+        >
+      </footer>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
